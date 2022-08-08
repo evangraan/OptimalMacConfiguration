@@ -29,7 +29,7 @@ csrutil enable
 
 ### Suspend inactive chrome extentions
 
-Use google chrome. Install the 'new tab suspender' extension. Specifically use this one as it is safe. Others may be malware.
+While working, suspend tabs that will not be used for a while, but that you want to keep around. Do this by installing the TooManyTabs extension. Then click on the extensions icon (the puzzle piece) and click on the pin next to TooManyTabs in order to have it visible all the time.
 
 ## CPU performance
 
