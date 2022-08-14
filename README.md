@@ -51,8 +51,8 @@ findfiles(){
 }
 
 # Character contants that can be used in virtual environments where the keyboard does not map accurately
-export PIPE=|
-export TD=~
-export BS=\
+export PIPE=\|
+export TD=\~
+export BS=\\
 ```
 
