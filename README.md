@@ -39,3 +39,12 @@ While working, suspend tabs that will not be used for a while, but that you want
 sudo mdutil -a -i off
 
 ```
+
+## Utility scripts
+```
+ % cat /usr/local/bin/findfiles
+#!/bin/bash
+echo "Searching for $1 in ."
+find . | grep $1
+```
+
