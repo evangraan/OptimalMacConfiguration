@@ -42,7 +42,7 @@ sudo mdutil -a -i off
 
 ## Utilities
 
-Place these in your home directory's ```.bashrc``. Note: on OSX, depending on setup, .bashrc may not be sourced when a terminal is opened. To source it, open a Terminal and edit its preferences from the menu. In the 'Shell' section, enable 'Run command' and enter ```source your-home-directory/.bashrc```
+Place these in your home directory's ```.bashrc```. Note: on OSX, depending on setup, .bashrc may not be sourced when a terminal is opened. To source it, open a Terminal and edit its preferences from the menu. In the 'Shell' section, enable 'Run command' and enter ```source your-home-directory/.bashrc```
 ```
 
 findfiles(){
