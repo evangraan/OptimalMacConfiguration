@@ -40,11 +40,19 @@ sudo mdutil -a -i off
 
 ```
 
-## Utility scripts
+## Utilities
+
+Place these in your home directory's ```.bashrc``. Note: on OSX, depending on setup, .bashrc may not be sourced when a terminal is opened. To source it, open a Terminal and edit its preferences from the menu. In the 'Shell' section, enable 'Run command' and enter ```source your-home-directory/.bashrc```
 ```
- % cat /usr/local/bin/findfiles
-#!/bin/bash
-echo "Searching for $1 in ."
-find . | grep $1
+
+findfiles(){
+  echo "Searching for $1 in ."
+  find . | grep $1
+}
+
+# Character contants that can be used in virtual environments where the keyboard does not map accurately
+export PIPE=|
+export TD=~
+export BS=\
 ```
 
