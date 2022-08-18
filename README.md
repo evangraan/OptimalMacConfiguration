@@ -40,7 +40,7 @@ sudo mdutil -a -i off
 
 ```
 
-##
+## bash
 
 Install the latest version of bash and make it the default:
 
