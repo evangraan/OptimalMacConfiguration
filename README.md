@@ -40,6 +40,10 @@ sudo mdutil -a -i off
 
 ```
 
+## Browsers
+
+My experience has been that using Google chrome leads to consistently high RAM and load averages on MACs with a T2 security chip. Using Safari decreases load average hugely. Only use Safari on T2 chip MACs.
+
 ## bash
 
 Install the latest version of bash and make it the default:
