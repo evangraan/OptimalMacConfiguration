@@ -74,3 +74,5 @@ export TD=\~
 export BS=\\
 ```
 
+## Keyboard layout for virtualization / remote control
+If driving the MAC via synergy, select the correct keyboard layout on the synergy host. E.g. for a cherry KC 1000 on an Ubuntu host, the generic English (US) keybaoard layout works instead of the English (UK) layout.
