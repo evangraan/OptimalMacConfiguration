@@ -101,7 +101,7 @@ while [ 1 -lt 2 ]; do
   PIDS=$(ps aux | grep -i steam | tr -s ' ' ' ' | cut -d ' ' -f2)
   for f in $(echo $PIDS); do
     echo "Found [$f]"
-    renice 20 $f
+    renice 10 $f
   done
 
   echo ""
@@ -109,7 +109,7 @@ while [ 1 -lt 2 ]; do
   PIDS=$(ps aux | grep -i hearthstone | tr -s ' ' ' ' | cut -d ' ' -f2)
   for f in $(echo $PIDS); do
     echo "Found [$f]"
-    renice 20 $f
+    renice 10 $f
   done
 
   echo ""
@@ -117,7 +117,7 @@ while [ 1 -lt 2 ]; do
   PIDS=$(ps aux | grep Battle | tr -s ' ' ' ' | cut -d ' ' -f2)
   for f in $(echo $PIDS); do
     echo "Found [$f]"
-    renice 20 $f
+    renice 10 $f
   done
 
   echo ""
