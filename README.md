@@ -75,7 +75,7 @@ Re: virtualization / remote control, if driving the MAC via synergy, select the 
 
 ## Process priority
 
-Prioritize synergy over other processes. This repo includes an example benice script. Create a script in /usr/local/bin/benice, make it executable and ensure its on the path. Then when-ever you want it to monitor and optimize your task list, run it in the background with ```sudo nohup benice\&```
+Prioritize synergy over other processes. This repo includes an example benice script. Create a script in /usr/local/bin/benice, make it executable and ensure its on the path. Then when-ever you want it to monitor and optimize your task list, run it in the background with ```sudo nohup benice&```
 
 ## git
 
