@@ -56,7 +56,7 @@ export PATH=/usr/local/bin:$PATH
 
 ## fish
 
-An excellent shell.
+An excellent shell. Not that some bash scripting does not work in fish, for example, for loops based on $() executions do not work as expected.
 
 ## Utilities
 
