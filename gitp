@@ -1,0 +1,46 @@
+#!/bin/bash
+
+check_git_result(){
+  if [ "$1" == "128" ]; then
+    echo "Not a git repository"
+    exit $1
+  fi
+
+  if [ "$1" != "0" ]; then
+    echo "Unexpected exit code $1"
+    exit $1
+  fi
+}
+
+BRANCH=$(git branch --show-current 2>&1)
+
+CHANGESTRACKED=$(git status --porcelain 2>&1)
+check_git_result $?
+
+CHANGESUNTRACKED=$(git status --porcelain -u all  2>&1)
+check_git_result $?
+
+if [ "$CHANGESTRACKED" == "" -a "$CHANGESUNTRACKED" == "" ]; then
+  echo "No changes"
+  exit 0
+fi
+
+usage(){
+  echo "Check for changes in the local repo. If found, add them all and commit with a message, then push to the currently selected branch to 'origin BRANCH'"
+  echo "Usage: gitp MESSAGE"
+  exit 1
+}
+
+
+if [ "$1" == "" ]; then
+  usage
+fi
+
+git add . 2>&1
+check_git_result $?
+
+git commit -m "$1" 2>&1
+check_git_result $?
+
+git push origin $BRANCH  2>&1
+check_git_result $?
