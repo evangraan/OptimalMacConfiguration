@@ -72,3 +72,62 @@ findfiles(){
 ## Keyboard layout
 
 Re: virtualization / remote control, if driving the MAC via synergy, select the correct keyboard layout on the synergy host. E.g. for a cherry KC 1000 on an Ubuntu host, the generic English (US) keybaoard layout works instead of the English (UK) layout.
+
+## Process priority
+
+Prioritize synergy over other processes. I include some examples below. Create a script in /usr/local/bin/benice, make it executable and ensure its on the path. Then when-ever you want it to monitor and optimize your task list, run it in the background with ```sudo nohup /usr/local/bin&```
+
+
+```
+#!/bin/bash
+
+WHOAMI=$(whoami)
+if [ "$WHOAMI" != "root" ]; then
+  echo "Must be root"
+  exit 1
+fi
+
+while [ 1 -lt 2 ]; do
+  echo ""
+  echo "Risk (low)"
+  PIDS=$(ps aux | grep RISK | tr -s ' ' ' ' | cut -d ' ' -f2)
+  for f in $(echo $PIDS); do
+    echo "Found [$f]"
+    renice 10 $f
+  done
+
+  echo ""
+  echo "Steam (low)"
+  PIDS=$(ps aux | grep -i steam | tr -s ' ' ' ' | cut -d ' ' -f2)
+  for f in $(echo $PIDS); do
+    echo "Found [$f]"
+    renice 20 $f
+  done
+
+  echo ""
+  echo "Hearthstone (low)"
+  PIDS=$(ps aux | grep -i hearthstone | tr -s ' ' ' ' | cut -d ' ' -f2)
+  for f in $(echo $PIDS); do
+    echo "Found [$f]"
+    renice 20 $f
+  done
+
+  echo ""
+  echo "Battlenet"
+  PIDS=$(ps aux | grep Battle | tr -s ' ' ' ' | cut -d ' ' -f2)
+  for f in $(echo $PIDS); do
+    echo "Found [$f]"
+    renice 20 $f
+  done
+
+  echo ""
+  echo "synergy (high)"
+  PIDS=$(ps aux | grep -i synergy | tr -s ' ' ' ' | cut -d ' ' -f2)
+  for f in $(echo $PIDS); do
+    echo "Found [$f]"
+    renice -2 $f
+  done
+
+  sleep 30
+done
+```
