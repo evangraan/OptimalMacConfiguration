@@ -29,6 +29,10 @@ csrutil enable
 
 ## CPU performance
 
+### Adobe acrobat reader
+
+Fully quit Adobe acrobat reader when-ever possible. Set preview to view PDF files and use Adobe for signing documents only. When in the background, Acrobat reader can spike load average consistently high. Closing it significantly reduces load on the system. Also consider tuning acrobat performance in general: https://support.abacusnext.com/hc/en-us/articles/360032296251-Adobe-PDF-optimization-for-performance
+
 ### Disable indexing and index stores
 
 ```
