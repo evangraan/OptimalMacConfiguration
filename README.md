@@ -31,7 +31,11 @@ csrutil enable
 
 ### Adobe acrobat reader
 
-Fully quit Adobe acrobat reader when-ever possible. Set preview to view PDF files and use Adobe for signing documents only. When in the background, Acrobat reader can spike load average consistently high. Closing it significantly reduces load on the system. Also consider tuning acrobat performance in general: https://support.abacusnext.com/hc/en-us/articles/360032296251-Adobe-PDF-optimization-for-performance
+Fully quit Adobe acrobat reader when-ever possible.
+
+Set preview to view PDF files and use Adobe for signing documents only. To do this, select (left-click) any PDF document. Then press CMD-I to open its information panel. Expand the "Open with" section, select Preview as the app and then select "Change all" to open PDFs with Preview in future.
+
+When in the background, Acrobat reader can spike load average consistently high. Closing it significantly reduces load on the system. Also consider tuning acrobat performance in general: https://support.abacusnext.com/hc/en-us/articles/360032296251-Adobe-PDF-optimization-for-performance
 
 ### Disable indexing and index stores
 
@@ -84,3 +88,7 @@ Prioritize synergy over other processes. This repo includes an example benice sc
 ## git
 
 This repo includes a ```gitp``` script, which makes a specific commit workflow faster and easier. See the script for details.
+
+## Finder
+
+Open finder, then select Preferences -> Advanced -> Show all file extensions
