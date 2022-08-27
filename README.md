@@ -44,6 +44,13 @@ sudo mdutil -a -i off
 
 ```
 
+## iGlance
+
+Install iGlance to see system status in the status bar:
+```
+brew install --cask iglance
+```
+
 ## Browsers
 
 My experience has been that using Google chrome leads to consistently high RAM and load averages on MACs with a T2 security chip. Using Safari decreases load average hugely. Only use Safari on T2 chip MACs.
