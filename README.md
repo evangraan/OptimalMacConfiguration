@@ -51,6 +51,15 @@ Install iGlance to see system status in the status bar:
 brew install --cask iglance
 ```
 
+## showloadaverage
+
+The showloadaverage script in this repo is an adaptation of: https://github.com/alexglasser/menubarnotifier
+To continuously show load average in the status bar (which is more useful than CPU for user performance experience purposes):
+- Install PyObjC: ```pip3 install -U pyobjc```
+- Place the ```showloadaverage``` script and the ```getloadaverage``` script in this repo in ```/usr/local/bin``` and make them executable with ```sudo chmod +x <script>```
+- ```nohup showloadaverage&```
+- Optionally create a launchd service, e.g. https://medium.com/swlh/how-to-use-launchd-to-run-services-in-macos-b972ed1e352
+
 ## Browsers
 
 My experience has been that using Google chrome leads to consistently high RAM and load averages on MACs with a T2 security chip. Using Safari decreases load average hugely. Only use Safari on T2 chip MACs.
