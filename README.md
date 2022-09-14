@@ -105,6 +105,10 @@ Prioritize synergy over other processes. This repo includes an example benice sc
 
 This repo includes a ```gitp``` script, which makes a specific commit workflow faster and easier. See the script for details.
 
+## adb
+
+ADB via USB is preferred, how-ever adb via wifi might be preferred under some circumstances. The ```adb_wifi.sh``` script facilitates this.
+
 ## Finder
 
 Open finder, then select Preferences -> Advanced -> Show all file extensions
